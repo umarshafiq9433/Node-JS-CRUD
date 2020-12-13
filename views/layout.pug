@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+
+    <!-- jQuery library -->
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
+    <!-- Popper JS -->
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js")
+
+    <!-- Latest compiled JavaScript -->
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js")
+
+    link(rel="stylesheet",href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  body
+    h1.bg-dark.text-white.p-3.rounded.text-center= title
+      span.float-left
+        a(href="/").text-dark.mx-2.bg-white.rounded.p-1
+          i.fa.fa-home
+        a(href="/create").text-dark.mx-2.bg-white.rounded.p-1
+          i.fa.fa-plus
+    block content

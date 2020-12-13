@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .container
+        table.table
+            tr
+                th Course Name
+                th Course ID
+                th Course Duration
+                th Course Fee
+                th Actions
+            each course in courses
+                tr
+                td  #{course.crName}
+                td  #{course._id}
+                td  #{course.crDuration}
+                td  #{course.crFee}
+                td
+                    a(href="/"+course._id+"/edit").btn.btn-warning.mr-1 Update
+                    a(href="/"+course._id+"/delete").btn.btn-danger Delete
